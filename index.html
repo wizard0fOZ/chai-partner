@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Chai Partner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress-bar" aria-hidden="true">
+    <span id="progressFill"></span>
+  </div>
+
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="page-glow page-glow-left" aria-hidden="true"></div>
+  <div class="page-glow page-glow-right" aria-hidden="true"></div>
+
+  <main class="page-shell">
+    <section class="hero panel reveal is-visible" id="top">
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">chai tradition</p>
+          <h1>for my chai partner</h1>
+          <p class="hero-subtitle">I feel like me better at writing or coding than saying things in person, so here it is 🫣.</p>
+
+          <div class="hero-actions">
+            <button class="primary-button" id="noteToggle" type="button" aria-expanded="false" aria-controls="heroNote">
+              open note
+            </button>
+            <a class="secondary-link" href="#like">skip to the good part</a>
+          </div>
+
+          <div class="hero-stats reveal">
+            <span>meetups: 7</span>
+            <span>status: looking forward to more hehe</span>
+          </div>
+
+          <div class="hero-note reveal" id="heroNote" hidden>
+            <p>Figured better saying it fully than half half yk.</p>
+            <p>I really like what this little routine has quietly become, and to write it down seem more better than trying to say it right in person.</p>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-tilt>
+          <div class="note-sheet">
+            <p class="note-label">little note</p>
+            <p class="note-line">chai, bru, small jokes, easy company</p>
+            <p class="note-line">somehow seven meetups went by very quickly</p>
+            <p class="note-line note-line-strong">i like this. i like you.</p>
+          </div>
+
+          <div class="floating-pill floating-pill-top" data-float>weekly tradition</div>
+          <div class="floating-pill floating-pill-bottom" data-float>soft launch of honesty</div>
+
+          <div class="hero-sticker hero-sticker-chai" data-float>
+            <img src="assets/chai.png" alt="A chai cup illustration.">
+          </div>
+
+          <div class="hero-sticker hero-sticker-dog" data-float>
+            <img src="assets/dog.png" alt="A small dog illustration.">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="why">
+      <div class="section-heading">
+        <p class="eyebrow">why this exists</p>
+        <h2>another way to say so my introvert self doesnt explode from the pressure 🙃</h2>
+      </div>
+
+      <div class="section-split">
+        <p class="section-copy">
+          I’ve really been enjoying our time together. The more we kept meeting, the more it stopped feeling random and started feeling like something I genuinely care to honestly.
+        </p>
+        <p class="section-aside">
+          Also, thought this would be nicer to say it all in one go instead of shallowing my words midway...
+        </p>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="like">
+      <div class="section-heading">
+        <p class="eyebrow">things i like about us</p>
+        <h2>the lil things does alot to me</h2>
+      </div>
+
+      <div class="card-grid">
+        <article class="mini-card reveal" data-tilt>
+          <span class="card-index">01</span>
+          <h3>the drink switch</h3>
+          <p>Somehow your bru ended up in my tea story, which feels exactly like the kind of detail I’d remember.</p>
+        </article>
+
+        <article class="mini-card reveal" data-tilt>
+          <span class="card-index">02</span>
+          <h3>the comfort</h3>
+          <p>Being around you feels easy. Nothing needs to be performed, and I like that more than I can explain.</p>
+        </article>
+
+        <article class="mini-card reveal" data-tilt>
+          <span class="card-index">03</span>
+          <h3>the small jokes</h3>
+          <p>Chai partner, sleepyhead, hyper Isya, all the tiny teasing moments. They make this feel light and real.</p>
+        </article>
+
+        <article class="mini-card reveal" data-tilt>
+          <span class="card-index">04</span>
+          <h3>how natural it feels</h3>
+          <p>7 meetups actually felt unreal, went by pretty fast, it was nice too. at the end, just seeing when the next one would be. Ik might sound excessive but I really do like spending time with you hehe.</p>
+        </article>
+
+        <article class="mini-card mini-card-wide reveal" data-tilt>
+          <div class="mini-card-media">
+            <img src="assets/dog.png" alt="A small dog illustration used as an inside joke.">
+          </div>
+          <div>
+            <span class="card-index">bonus</span>
+            <h3>bonus: doggies</h3>
+            <p>Added bonus: your love for doggies makes this part feel especially fitting.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="mean">
+      <div class="section-heading">
+        <p class="eyebrow">what i'm trying to say</p>
+        <h2>this has started to matter to me</h2>
+      </div>
+
+      <div class="message-block" data-tilt>
+        <p>I like spending time with you.</p>
+        <p>I’ve started genuinely looking forward to it in a way that feels very simple and very real.</p>
+        <p>I’m still better at writing than saying it on the spot, but I wanted you to know that you matter to me.</p>
+      </div>
+    </section>
+
+    <section class="panel panel-ending reveal" id="ending">
+      <div class="section-heading">
+        <p class="eyebrow">soft ending</p>
+        <h2>i’d love to keep seeing where this goes</h2>
+      </div>
+
+      <p class="section-copy">
+        If you feel the same, I’d really like to keep this little chai tradition going and see what it becomes.
+      </p>
+
+      <div class="signature-row reveal" data-tilt>
+        <img src="assets/chai.png" alt="A chai cup illustration.">
+        <div>
+          <p class="signature-title">short version</p>
+          <p>I just wanted you to know this means something to me very much even tho i dun say it enuf.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer reveal">
+    <p>status: chai partner acquired</p>
+    <p>bug report: too shy to say this faster</p>
+    <p>build: version 0.7, still in progress</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
