@@ -13,6 +13,7 @@ if (noteToggle && heroNote) {
 
     if (isHidden) {
       heroNote.hidden = false;
+      void heroNote.offsetWidth;
       requestAnimationFrame(() => {
         heroNote.classList.add("is-visible");
       });
@@ -94,3 +95,29 @@ if (!reduceMotion) {
     });
   });
 }
+
+const yesBtn = document.getElementById("yesBtn");
+const slowBtn = document.getElementById("slowBtn");
+const slowNote = document.getElementById("slowNote");
+
+yesBtn?.addEventListener("click", () => {
+  yesBtn.classList.add("is-pressed");
+
+  window.setTimeout(() => {
+    yesBtn.classList.remove("is-pressed");
+    window.location.href = "confession.html";
+  }, reduceMotion ? 0 : 160);
+});
+
+slowBtn?.addEventListener("click", () => {
+  if (!slowNote) {
+    return;
+  }
+
+  slowNote.hidden = false;
+  requestAnimationFrame(() => {
+    slowNote.classList.add("is-visible");
+  });
+  slowBtn.textContent = "thank you for being honest";
+  slowBtn.disabled = true;
+});

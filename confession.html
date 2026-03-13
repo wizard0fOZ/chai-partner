@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One More Thing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body class="letter-page">
+  <div class="progress-bar" aria-hidden="true">
+    <span style="width: 100%;"></span>
+  </div>
+
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="page-glow page-glow-left" aria-hidden="true"></div>
+  <div class="page-glow page-glow-right" aria-hidden="true"></div>
+
+  <main class="letter-shell">
+    <section class="panel letter-panel">
+      <a class="secondary-link back-link" href="index.html">back to the chai page</a>
+
+      <div class="letter-heading">
+        <p class="eyebrow">one more thing</p>
+        <h1>my actual confession</h1>
+        <p class="letter-subtitle">the happy part happened, so now i can say the real thing properly.</p>
+      </div>
+
+      <article class="letter-paper">
+        <p class="eyebrow">Note</p>
+        <h2>Sleepyhead Isya hehe</h2>
+
+        <div class="letter-content" id="letterContent" aria-live="polite">
+          <p class="letter-loading">loading your letter...</p>
+        </div>
+
+        <p class="letter-help" id="letterHelp" hidden>
+          if the text file does not load automatically from disk, you can still open it here:
+          <a class="letter-source-link" href="confession-letter.txt" target="_blank" rel="noreferrer">confession-letter.txt</a>
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <iframe
+    class="letter-source-frame"
+    id="letterSourceFrame"
+    src="confession-letter.txt"
+    title="Confession letter source"
+    tabindex="-1"
+    aria-hidden="true"
+  ></iframe>
+
+  <script src="confession.js"></script>
+</body>
+</html>
