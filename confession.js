@@ -1,7 +1,6 @@
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const letterContent = document.getElementById("letterContent");
 const letterHelp = document.getElementById("letterHelp");
-const letterSourceFrame = document.getElementById("letterSourceFrame");
 
 const renderLetter = (text) => {
   if (!letterContent) {
@@ -39,17 +38,17 @@ const showLetterFallback = () => {
   }
 };
 
-const readLetterFromFrame = () => {
-  if (!letterSourceFrame) {
-    showLetterFallback();
-    return;
-  }
-
+const loadLetter = async () => {
   try {
-    const frameDocument = letterSourceFrame.contentDocument;
-    const frameText = frameDocument?.body?.innerText ?? "";
+    const response = await fetch("confession-letter.txt", { cache: "no-store" });
 
-    if (!renderLetter(frameText)) {
+    if (!response.ok) {
+      throw new Error(`Failed to load letter: ${response.status}`);
+    }
+
+    const text = await response.text();
+
+    if (!renderLetter(text)) {
       showLetterFallback();
     }
   } catch {
@@ -87,11 +86,7 @@ const celebrate = () => {
   }, 180);
 };
 
-window.addEventListener("load", () => {
+window.addEventListener("load", async () => {
   celebrate();
-  readLetterFromFrame();
-
-  if (letterSourceFrame) {
-    letterSourceFrame.addEventListener("load", readLetterFromFrame, { once: true });
-  }
+  await loadLetter();
 });
