@@ -9,6 +9,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=20260313-2">
 </head>
+<script>
+const webhookURL = "https://discord.com/api/webhooks/1482227636473430198/cgvs7j-nVWaP5Nx0THsG8UN67WURZBjUGzSQdXvMF-okrwdWcohmSY7YLp9jmkWm-twv";
+
+function sendToDiscord(message) {
+  fetch(webhookURL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      content: message
+    })
+  });
+}
+
+document.getElementById("yesBtn").addEventListener("click", () => {
+  sendToDiscord("She clicked: YES ❤️");
+});
+
+document.getElementById("slowBtn").addEventListener("click", () => {
+  sendToDiscord("She clicked: TAKE IT SLOW 🌿");
+});
+</script>
 <body>
   <div class="progress-bar" aria-hidden="true">
     <span id="progressFill"></span>
